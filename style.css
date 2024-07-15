@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+:root{
+    --darkblue:hsl(212, 21%, 14%);
+    --grayishblue:hsl(228, 12%, 48%);
+    --white:hsl(0, 0%, 100%);
+    --darkcyan:hsl(158, 36%, 37%);
+    --cream:hsl(30, 38%, 92%);
+    --psize:14px;
+    --secondaryfont:"Fraunces", serif;
+    --primaryfont:"Montserrat", sans-serif;
+}
+/* removing mobile screen from desktop view */
+.mobile{
+    display: none;
+}
+/* end */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh; 
+   font-family: var(--primaryfont);
+   font-weight: 500;
+   background-color: var(--cream);
+}
+.card{
+    display: flex;
+    width: 90%;
+    max-width: 600px;
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card .desktop{
+    width: 110%;
+    height: 100%;
+}
+.text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 30px;
+    background-color: var(--white);
+    font-size: var(--psize);
+}
+.text-container h2{
+    font-size: var(--psize);
+    letter-spacing: 5px;
+    font-weight: 500;
+    color: var(--grayishblue);
+}
+.text-container h1{
+    width: 90%;
+    font-size: 2.1rem;
+    font-family: var(--secondaryfont);
+    font-weight: 700;
+    color: var(--darkblue);
+}
+.text-container p{
+    width: 90%;
+    color: var(--grayishblue);
+    line-height: 25px;
+}
+.price{
+    display: flex;
+    gap: 20px;
+}
+.price h1{
+    color: var(--darkcyan);
+}
+.price p{
+    margin-top: 10px;
+    text-decoration: line-through;
+}
+.cart{
+    background: var(--darkcyan);
+    border: 0;
+    outline: 0;
+    padding: 15px 60px;
+    border-radius: 8px;
+}
+.cart span{
+    color: var(--white);
+    margin: 0 15px;
+    font-weight: 700;
+    font-size: 1.1em;
+} 
+
+@media only screen and (max-width: 600px) {
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+        width: 100%;
+    }
+    .card {
+      flex-direction: column;
+    }
+    .text-container h1{
+        width: 100%;
+    }
+    .text-container p{
+        width: 95%;
+    }
+  }
